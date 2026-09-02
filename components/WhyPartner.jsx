@@ -75,7 +75,7 @@ export default function WhyPartner() {
             href="#about"
             className="why-partner-link"
           >
-            Discover Nexfram
+            Discover Nexframe
             <ArrowUpRight size={16} />
           </a>
         </motion.div>

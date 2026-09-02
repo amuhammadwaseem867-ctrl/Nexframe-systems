@@ -29,7 +29,7 @@ export default function Footer() {
             <span className="footer-logo-mark">N</span>
 
             <span className="footer-logo-text">
-              NEXFRAM
+              NEXFRAME
               <small>SYSTEMS</small>
             </span>
           </Link>
@@ -103,7 +103,7 @@ export default function Footer() {
             </span>
 
             <span>
-              info@nexframsystems.com
+              info@nexframesystems.com
             </span>
           </a>
 
