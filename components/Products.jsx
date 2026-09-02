@@ -11,14 +11,46 @@ import {
 } from "lucide-react";
 import "./Products.css";
 
+/* ==================================================
+   EXPLORE BY CATEGORY
+================================================== */
+
 const exploreCategories = [
-  "Residential Windows and Doors",
-  "Commercial Systems",
-  "Curtain Wall Systems",
-  "Storefront Systems",
-  "Window Wall Systems",
-  "Sliding and Folding Doors",
+  {
+    name: "Residential Windows and Doors",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW_5tD8L957nrj-xOwecckuHiJsla8PR3elyd8d-VYVcyP3KVDSN-rSwI&s=10",
+  },
+  {
+    name: "Commercial Systems",
+    image:
+      "https://sc04.alicdn.com/kf/H2c18b6383af84b57a6088c33f791925cD.jpg",
+  },
+  {
+    name: "Curtain Wall Systems",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmuJWCx7KRcLD-WZhpjono5NlCsTUL9wkbZ-B5PS5X-ac1PrV2pJnVY8jB&s=10",
+  },
+  {
+    name: "Storefront Systems",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpFZNNC0A1soPGRqZfDFDBcaBcGFwBDetEu1C02l3kyIjCLXVvk2510Enb&s=10",
+  },
+  {
+    name: "Window Wall Systems",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQJulqxV2M6sPRrI0dBLmReLvZjIk-4TPX1ZmGSLp2qKSRRsV5DFY25IU&s=10",
+  },
+  {
+    name: "Sliding and Folding Doors",
+    image:
+      "https://cdn.shopify.com/s/files/1/0094/4285/2911/products/eab92c95-a17d-4b9b-a174-953e58780266_1200x.jpg?v=1599859606",
+  },
 ];
+
+/* ==================================================
+   PRODUCT TYPE FILTERS
+================================================== */
 
 const productFilters = [
   "All Products",
@@ -33,6 +65,10 @@ const productFilters = [
   "Folding Doors",
 ];
 
+/* ==================================================
+   MORE FILTERS
+================================================== */
+
 const moreFilters = [
   "Residential",
   "Commercial",
@@ -40,6 +76,10 @@ const moreFilters = [
   "Window Systems",
   "Architectural Systems",
 ];
+
+/* ==================================================
+   PRODUCTS
+================================================== */
 
 const products = [
   {
@@ -244,12 +284,28 @@ const products = [
   },
 ];
 
+/* ==================================================
+   COMPONENT
+================================================== */
+
 export default function Products() {
-  const [activeFilter, setActiveFilter] = useState("All Products");
+  const [activeFilter, setActiveFilter] =
+    useState("All Products");
+
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("All Categories");
-  const [showFilters, setShowFilters] = useState(false);
-  const [selectedMoreFilters, setSelectedMoreFilters] = useState([]);
+
+  const [category, setCategory] =
+    useState("All Categories");
+
+  const [showFilters, setShowFilters] =
+    useState(false);
+
+  const [selectedMoreFilters, setSelectedMoreFilters] =
+    useState([]);
+
+  /* ==================================================
+     TOGGLE MORE FILTER
+  ================================================== */
 
   const toggleMoreFilter = (filter) => {
     setSelectedMoreFilters((current) =>
@@ -259,35 +315,52 @@ export default function Products() {
     );
   };
 
+  /* ==================================================
+     FILTER PRODUCTS
+  ================================================== */
+
   const filteredProducts = useMemo(() => {
     const query = search.trim().toLowerCase();
 
     return products.filter((product) => {
+      /* SEARCH */
+
       const searchMatch =
         !query ||
         product.name.toLowerCase().includes(query) ||
         product.type.toLowerCase().includes(query) ||
         product.category.toLowerCase().includes(query);
 
+      /* PRODUCT TYPE */
+
       const typeMatch =
         activeFilter === "All Products" ||
         product.type === activeFilter;
+
+      /* CATEGORY */
 
       const categoryMatch =
         category === "All Categories" ||
         product.category === category;
 
+      /* MORE FILTERS */
+
       const moreFilterMatch =
         selectedMoreFilters.length === 0 ||
         selectedMoreFilters.some((filter) => {
           if (filter === "Residential") {
-            return product.category === "Residential Windows and Doors";
+            return (
+              product.category ===
+              "Residential Windows and Doors"
+            );
           }
 
           if (filter === "Commercial") {
             return (
-              product.category === "Commercial Systems" ||
-              product.category === "Storefront Systems"
+              product.category ===
+                "Commercial Systems" ||
+              product.category ===
+                "Storefront Systems"
             );
           }
 
@@ -308,11 +381,19 @@ export default function Products() {
     selectedMoreFilters,
   ]);
 
+  /* ==================================================
+     ACTIVE FILTER CHECK
+  ================================================== */
+
   const hasActiveFilters =
     search.trim() ||
     activeFilter !== "All Products" ||
     category !== "All Categories" ||
     selectedMoreFilters.length > 0;
+
+  /* ==================================================
+     CLEAR FILTERS
+  ================================================== */
 
   const clearAllFilters = () => {
     setSearch("");
@@ -320,6 +401,10 @@ export default function Products() {
     setCategory("All Categories");
     setSelectedMoreFilters([]);
   };
+
+  /* ==================================================
+     CATEGORY CARD CLICK
+  ================================================== */
 
   const selectCategory = (categoryName) => {
     setCategory(categoryName);
@@ -336,8 +421,10 @@ export default function Products() {
   };
 
   return (
-    <section className="products" id="products">
-
+    <section
+      className="products"
+      id="products"
+    >
       {/* ==================================================
           PRODUCT BANNER
       ================================================== */}
@@ -361,12 +448,20 @@ export default function Products() {
             architecture.
           </p>
 
-          <a href="#contact" className="products-browse">
+          <a
+            href="#contact"
+            className="products-browse"
+          >
             Get a Free Quote
-            <ArrowUpRight size={17} strokeWidth={1.8} />
+
+            <ArrowUpRight
+              size={17}
+              strokeWidth={1.8}
+            />
           </a>
 
           <div className="products-banner-meta">
+
             <div>
               <strong>01</strong>
               <span>Windows</span>
@@ -381,6 +476,7 @@ export default function Products() {
               <strong>03</strong>
               <span>Architectural Systems</span>
             </div>
+
           </div>
 
         </div>
@@ -398,7 +494,6 @@ export default function Products() {
 
       </div>
 
-
       {/* ==================================================
           EXPLORE BY CATEGORY
       ================================================== */}
@@ -408,11 +503,15 @@ export default function Products() {
         <div className="products-section-heading">
 
           <div>
+
             <span className="section-eyebrow">
               EXPLORE OUR SYSTEMS
             </span>
 
-            <h3>Explore by Category</h3>
+            <h3>
+              Explore by Category
+            </h3>
+
           </div>
 
           <p>
@@ -424,51 +523,85 @@ export default function Products() {
 
         <div className="category-cards">
 
-          {exploreCategories.map((categoryName, index) => {
+          {exploreCategories.map(
+            (categoryItem, index) => {
 
-            const isActive = category === categoryName;
+              const isActive =
+                category === categoryItem.name;
 
-            return (
-              <button
-                className={
-                  isActive
-                    ? "category-card active"
-                    : "category-card"
-                }
-                key={categoryName}
-                type="button"
-                onClick={() => selectCategory(categoryName)}
-              >
+              return (
+                <button
+                  className={
+                    isActive
+                      ? "category-card active"
+                      : "category-card"
+                  }
+                  key={categoryItem.name}
+                  type="button"
+                  onClick={() =>
+                    selectCategory(
+                      categoryItem.name
+                    )
+                  }
+                >
 
-                <span className="category-card-number">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+                  {/* CATEGORY IMAGE */}
 
-                <span className="category-card-arrow">
-                  <ArrowUpRight
-                    size={18}
-                    strokeWidth={1.7}
+                  <img
+                    className="category-card-image"
+                    src={categoryItem.image}
+                    alt={categoryItem.name}
+                    loading="lazy"
                   />
-                </span>
 
-                <div className="category-card-content">
+                  {/* IMAGE OVERLAY */}
 
-                  <span>PRODUCT SYSTEM</span>
+                  <div className="category-card-overlay" />
 
-                  <h4>{categoryName}</h4>
+                  {/* NUMBER */}
 
-                  <div className="category-card-line" />
+                  <span className="category-card-number">
+                    {String(index + 1).padStart(
+                      2,
+                      "0"
+                    )}
+                  </span>
 
-                </div>
+                  {/* ARROW */}
 
-              </button>
-            );
-          })}
+                  <span className="category-card-arrow">
+
+                    <ArrowUpRight
+                      size={18}
+                      strokeWidth={1.7}
+                    />
+
+                  </span>
+
+                  {/* CONTENT */}
+
+                  <div className="category-card-content">
+
+                    <span>
+                      PRODUCT SYSTEM
+                    </span>
+
+                    <h4>
+                      {categoryItem.name}
+                    </h4>
+
+                    <div className="category-card-line" />
+
+                  </div>
+
+                </button>
+              );
+            }
+          )}
 
         </div>
 
       </div>
-
 
       {/* ==================================================
           BROWSE PRODUCTS
@@ -482,11 +615,15 @@ export default function Products() {
         <div className="browse-products-heading">
 
           <div>
+
             <span className="section-eyebrow">
               PRODUCT CATALOGUE
             </span>
 
-            <h3>Browse Products</h3>
+            <h3>
+              Browse Products
+            </h3>
+
           </div>
 
           <p>
@@ -496,8 +633,9 @@ export default function Products() {
 
         </div>
 
-
-        {/* PRODUCT TYPE FILTERS */}
+        {/* ==================================================
+            PRODUCT TYPE FILTERS
+        ================================================== */}
 
         <div className="product-filter-bar">
 
@@ -513,7 +651,9 @@ export default function Products() {
                     ? "product-filter active"
                     : "product-filter"
                 }
-                onClick={() => setActiveFilter(filter)}
+                onClick={() =>
+                  setActiveFilter(filter)
+                }
               >
                 {filter}
               </button>
@@ -524,10 +664,13 @@ export default function Products() {
 
         </div>
 
-
-        {/* SEARCH TOOLBAR */}
+        {/* ==================================================
+            SEARCH TOOLBAR
+        ================================================== */}
 
         <div className="product-toolbar">
+
+          {/* SEARCH */}
 
           <label className="product-search">
 
@@ -548,18 +691,28 @@ export default function Products() {
             />
 
             {search && (
+
               <button
                 type="button"
                 className="search-clear"
-                onClick={() => setSearch("")}
+                onClick={() =>
+                  setSearch("")
+                }
                 aria-label="Clear search"
               >
-                <X size={15} strokeWidth={1.8} />
+
+                <X
+                  size={15}
+                  strokeWidth={1.8}
+                />
+
               </button>
+
             )}
 
           </label>
 
+          {/* CATEGORY */}
 
           <div className="product-select">
 
@@ -571,13 +724,20 @@ export default function Products() {
               aria-label="Filter by category"
             >
 
-              <option>All Categories</option>
+              <option>
+                All Categories
+              </option>
 
-              {exploreCategories.map((item) => (
-                <option key={item}>
-                  {item}
-                </option>
-              ))}
+              {exploreCategories.map(
+                (item) => (
+                  <option
+                    key={item.name}
+                    value={item.name}
+                  >
+                    {item.name}
+                  </option>
+                )
+              )}
 
             </select>
 
@@ -589,6 +749,7 @@ export default function Products() {
 
           </div>
 
+          {/* MORE FILTERS */}
 
           <button
             type="button"
@@ -598,7 +759,9 @@ export default function Products() {
                 : "more-filters"
             }
             onClick={() =>
-              setShowFilters((current) => !current)
+              setShowFilters(
+                (current) => !current
+              )
             }
             aria-expanded={showFilters}
           >
@@ -608,10 +771,16 @@ export default function Products() {
               strokeWidth={1.7}
             />
 
-            <span>More Filters</span>
+            <span>
+              More Filters
+            </span>
 
             {selectedMoreFilters.length > 0 && (
-              <b>{selectedMoreFilters.length}</b>
+
+              <b>
+                {selectedMoreFilters.length}
+              </b>
+
             )}
 
             <ChevronDown
@@ -624,8 +793,9 @@ export default function Products() {
 
         </div>
 
-
-        {/* MORE FILTERS */}
+        {/* ==================================================
+            MORE FILTERS PANEL
+        ================================================== */}
 
         {showFilters && (
 
@@ -633,7 +803,9 @@ export default function Products() {
 
             <div className="more-filter-title">
 
-              <span>FILTER BY</span>
+              <span>
+                FILTER BY
+              </span>
 
               <strong>
                 Project Type &amp; System
@@ -646,9 +818,12 @@ export default function Products() {
               {moreFilters.map((filter) => {
 
                 const selected =
-                  selectedMoreFilters.includes(filter);
+                  selectedMoreFilters.includes(
+                    filter
+                  );
 
                 return (
+
                   <button
                     type="button"
                     key={filter}
@@ -665,12 +840,16 @@ export default function Products() {
                     <span className="filter-check">
 
                       {selected ? (
+
                         <Check
                           size={12}
                           strokeWidth={2}
                         />
+
                       ) : (
+
                         "+"
+
                       )}
 
                     </span>
@@ -678,6 +857,7 @@ export default function Products() {
                     {filter}
 
                   </button>
+
                 );
               })}
 
@@ -687,126 +867,165 @@ export default function Products() {
 
         )}
 
-
-        {/* RESULTS INFO */}
+        {/* ==================================================
+            RESULTS INFO
+        ================================================== */}
 
         <div className="products-results-info">
 
           <span>
+
             Showing{" "}
+
             <strong>
               {filteredProducts.length}
             </strong>{" "}
+
             of {products.length} products
+
           </span>
 
           {hasActiveFilters && (
+
             <button
               type="button"
               onClick={clearAllFilters}
             >
-              <span>Clear All Filters</span>
-              <X size={12} strokeWidth={1.8} />
+
+              <span>
+                Clear All Filters
+              </span>
+
+              <X
+                size={12}
+                strokeWidth={1.8}
+              />
+
             </button>
+
           )}
 
         </div>
 
-
-        {/* PRODUCT GRID */}
+        {/* ==================================================
+            PRODUCT GRID
+        ================================================== */}
 
         {filteredProducts.length > 0 ? (
 
           <div className="product-grid">
 
-            {filteredProducts.map((product) => (
+            {filteredProducts.map(
+              (product) => (
 
-              <article
-                className="product-card"
-                key={product.id}
-              >
+                <article
+                  className="product-card"
+                  key={product.id}
+                >
 
-                <div className="product-card-image">
+                  {/* PRODUCT IMAGE */}
 
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    loading="lazy"
-                  />
+                  <div className="product-card-image">
 
-                  <div className="product-card-shade" />
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      loading="lazy"
+                    />
 
-                  <span className="product-card-number">
-                    {String(product.id).padStart(2, "0")}
-                  </span>
+                    <div className="product-card-shade" />
 
-                  <span className="product-card-type">
-                    {product.type}
-                  </span>
-
-                  <div className="product-card-overlay">
-
-                    <span>VIEW SYSTEM</span>
-
-                    <span className="product-card-overlay-icon">
-                      <ArrowUpRight
-                        size={19}
-                        strokeWidth={1.6}
-                      />
+                    <span className="product-card-number">
+                      {String(product.id).padStart(
+                        2,
+                        "0"
+                      )}
                     </span>
 
-                  </div>
-
-                </div>
-
-
-                <div className="product-card-info">
-
-                  <div className="product-card-top">
-
-                    <span>
+                    <span className="product-card-type">
                       {product.type}
                     </span>
 
-                    <span>
-                      {product.system}
-                    </span>
+                    <div className="product-card-overlay">
+
+                      <span>
+                        VIEW SYSTEM
+                      </span>
+
+                      <span className="product-card-overlay-icon">
+
+                        <ArrowUpRight
+                          size={19}
+                          strokeWidth={1.6}
+                        />
+
+                      </span>
+
+                    </div>
 
                   </div>
 
-                  <h4>
-                    {product.name}
-                  </h4>
+                  {/* PRODUCT INFO */}
 
-                  <div className="product-card-bottom">
+                  <div className="product-card-info">
 
-                    <small>
-                      {product.category}
-                    </small>
+                    <div className="product-card-top">
 
-                    <a href="#contact">
-                      <span>Request Quote</span>
-                      <ArrowUpRight
-                        size={13}
-                        strokeWidth={1.8}
-                      />
-                    </a>
+                      <span>
+                        {product.type}
+                      </span>
+
+                      <span>
+                        {product.system}
+                      </span>
+
+                    </div>
+
+                    <h4>
+                      {product.name}
+                    </h4>
+
+                    <div className="product-card-bottom">
+
+                      <small>
+                        {product.category}
+                      </small>
+
+                      <a href="#contact">
+
+                        <span>
+                          Request Quote
+                        </span>
+
+                        <ArrowUpRight
+                          size={13}
+                          strokeWidth={1.8}
+                        />
+
+                      </a>
+
+                    </div>
 
                   </div>
 
-                </div>
+                </article>
 
-              </article>
-
-            ))}
+              )
+            )}
 
           </div>
 
         ) : (
 
+          /* ==================================================
+             NO RESULTS
+          ================================================== */
+
           <div className="products-no-results">
 
-            <span>NO RESULTS</span>
+            <span>
+              NO RESULTS
+            </span>
 
             <h4>
               No product systems found.
@@ -820,8 +1039,15 @@ export default function Products() {
               type="button"
               onClick={clearAllFilters}
             >
-              <span>Reset Filters</span>
-              <ArrowUpRight size={14} />
+
+              <span>
+                Reset Filters
+              </span>
+
+              <ArrowUpRight
+                size={14}
+              />
+
             </button>
 
           </div>
