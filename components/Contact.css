@@ -1,0 +1,372 @@
+/* ========================================
+   CONTACT
+======================================== */
+
+.contact {
+  width: 100%;
+  padding: 90px 0;
+  background: #102a43;
+  color: #ffffff;
+}
+
+.contact-container {
+  width: calc(100% - 80px);
+  max-width: 1380px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 70px;
+
+  align-items: start;
+}
+
+/* ========================================
+   LEFT SIDE
+======================================== */
+
+.contact-left {
+  padding-top: 8px;
+}
+
+.contact-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #d6a84f;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.contact-left h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 4.5vw, 64px);
+  font-weight: 400;
+
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.contact-left h2 span {
+  display: block;
+
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.contact-intro {
+  max-width: 390px;
+
+  margin: 25px 0 35px;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+/* ========================================
+   CONTACT INFO
+======================================== */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid
+    rgba(255, 255, 255, 0.12);
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 16px 0;
+
+  border-bottom: 1px solid
+    rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-info-icon {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid
+    rgba(214, 168, 79, 0.45);
+
+  color: #d6a84f;
+}
+
+.contact-info-item small {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.contact-info-item strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.contact-info-item:hover strong {
+  color: #d6a84f;
+}
+
+/* ========================================
+   LEFT CTA
+======================================== */
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 28px;
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  text-decoration: none;
+}
+
+.contact-link span {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid
+    rgba(214, 168, 79, 0.5);
+
+  color: #d6a84f;
+
+  border-radius: 50%;
+
+  transition: 0.25s ease;
+}
+
+.contact-link:hover span {
+  background: #d6a84f;
+  color: #102a43;
+
+  transform: translate(2px, -2px);
+}
+
+/* ========================================
+   RIGHT SIDE
+======================================== */
+
+.contact-right {
+  width: 100%;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  color: #102a43;
+}
+
+/* ========================================
+   FORM HEADER
+======================================== */
+
+.contact-form-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding-bottom: 20px;
+
+  margin-bottom: 5px;
+
+  border-bottom: 1px solid #e7ebef;
+}
+
+.contact-form-header span:first-child {
+  display: block;
+
+  margin-bottom: 6px;
+
+  color: #d6a84f;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.contact-form-header h3 {
+  margin: 0;
+
+  color: #102a43;
+
+  font-size: 25px;
+  font-weight: 500;
+
+  letter-spacing: -0.03em;
+}
+
+.contact-form-number {
+  color: #a0aab4;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+}
+
+/* ========================================
+   COMPACT QUOTE FORM OVERRIDES
+======================================== */
+
+/*
+   QuoteForm already contains its own section.
+   These overrides remove its large layout
+   when it is used inside Contact.
+*/
+
+.contact-right .quote-form-section {
+  padding: 0 !important;
+
+  background: transparent !important;
+}
+
+.contact-right .quote-form-container {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.contact-right .quote-form-intro {
+  display: none !important;
+}
+
+.contact-right .quote-form-card {
+  padding: 20px 0 0 !important;
+
+  background: transparent !important;
+
+  box-shadow: none !important;
+}
+
+.contact-right .quote-form {
+  gap: 18px;
+}
+
+.contact-right .quote-form-section-title {
+  margin-bottom: 12px;
+}
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 1000px) {
+  .contact-container {
+    width: calc(100% - 50px);
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+  }
+
+  .contact-left h2 {
+    font-size: 46px;
+  }
+
+  .contact-right {
+    padding: 25px;
+  }
+}
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 65px 0;
+  }
+
+  .contact-container {
+    width: calc(100% - 32px);
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .contact-left h2 {
+    font-size: 44px;
+  }
+
+  .contact-intro {
+    margin: 20px 0 28px;
+  }
+
+  .contact-right {
+    padding: 22px;
+  }
+
+  .contact-form-header h3 {
+    font-size: 23px;
+  }
+}
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 480px) {
+  .contact-container {
+    width: calc(100% - 24px);
+  }
+
+  .contact-left h2 {
+    font-size: 39px;
+  }
+
+  .contact-info-item {
+    padding: 13px 0;
+  }
+
+  .contact-right {
+    padding: 18px;
+  }
+}
