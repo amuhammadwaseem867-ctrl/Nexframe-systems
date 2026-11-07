@@ -15,9 +15,7 @@
   align-items: start;
 }
 
-/* ================================
-   HEADING
-================================ */
+/* Heading */
 
 .faq-heading {
   position: sticky;
@@ -63,9 +61,7 @@
   line-height: 1.8;
 }
 
-/* ================================
-   FAQ LIST
-================================ */
+/* FAQ list */
 
 .faq-list {
   width: 100%;
@@ -73,17 +69,13 @@
   border-top: 1px solid #d7dee4;
 }
 
-/* ================================
-   FAQ ITEM
-================================ */
+/* FAQ item */
 
 .faq-item {
   border-bottom: 1px solid #d7dee4;
 }
 
-/* ================================
-   QUESTION
-================================ */
+/* Question */
 
 .faq-question {
   width: 100%;
@@ -156,9 +148,7 @@
   border-color: #102a43;
 }
 
-/* ================================
-   ANSWER
-================================ */
+/* Answer */
 
 .faq-answer-wrapper {
   overflow: hidden;
@@ -179,9 +169,7 @@
   line-height: 1.85;
 }
 
-/* ================================
-   HOVER
-================================ */
+/* Hover */
 
 .faq-question:hover .faq-question-text {
   color: #b68a32;
@@ -191,9 +179,7 @@
   border-color: #b68a32;
 }
 
-/* ================================
-   TABLET
-================================ */
+/* Tablet */
 
 @media (max-width: 900px) {
   .faq {
@@ -215,9 +201,7 @@
   }
 }
 
-/* ================================
-   MOBILE
-================================ */
+/* Mobile */
 
 @media (max-width: 640px) {
   .faq {

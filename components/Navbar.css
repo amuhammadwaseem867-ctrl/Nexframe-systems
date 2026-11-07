@@ -1,6 +1,4 @@
-/* ========================================
-   NAVBAR
-======================================== */
+/* Navbar */
 
 .navbar {
   position: absolute;
@@ -36,9 +34,7 @@
     0 10px 40px rgba(5, 20, 35, 0.14);
 }
 
-/* ========================================
-   CONTAINER
-======================================== */
+/* Container */
 
 .navbar-container {
   width: calc(100% - 80px);
@@ -52,9 +48,7 @@
   align-items: center;
 }
 
-/* ========================================
-   LOGO
-======================================== */
+/* Logo */
 
 .navbar-logo {
   display: inline-flex;
@@ -110,9 +104,7 @@
   letter-spacing: 0.3em;
 }
 
-/* ========================================
-   DESKTOP MENU
-======================================== */
+/* Desktop menu */
 
 .navbar-menu {
   display: flex;
@@ -177,9 +169,7 @@
   transform: rotate(180deg);
 }
 
-/* ========================================
-   DROPDOWN
-======================================== */
+/* Dropdown */
 
 .navbar-dropdown {
   position: absolute;
@@ -307,9 +297,7 @@
   transform: translate(0, 0);
 }
 
-/* ========================================
-   REQUEST QUOTE
-======================================== */
+/* Request quote */
 
 .navbar-quote {
   min-height: 48px;
@@ -365,9 +353,7 @@
   transform: translate(2px, -2px);
 }
 
-/* ========================================
-   MOBILE TOGGLE
-======================================== */
+/* Mobile toggle */
 
 .navbar-mobile-toggle {
   display: none;
@@ -389,17 +375,13 @@
   cursor: pointer;
 }
 
-/* ========================================
-   MOBILE MENU
-======================================== */
+/* Mobile menu */
 
 .navbar-mobile {
   display: none;
 }
 
-/* ========================================
-   TABLET
-======================================== */
+/* Tablet */
 
 @media (max-width: 1050px) {
   .navbar-container {
@@ -421,9 +403,7 @@
   }
 }
 
-/* ========================================
-   MOBILE
-======================================== */
+/* Mobile */
 
 @media (max-width: 850px) {
   .navbar-container {
@@ -527,9 +507,7 @@
     transform: rotate(180deg);
   }
 
-  /* ========================================
-     MOBILE DROPDOWN
-  ======================================== */
+  /* Mobile dropdown */
 
   .navbar-mobile-dropdown {
     max-height: 0;
@@ -578,9 +556,7 @@
     color: #d6a84f;
   }
 
-  /* ========================================
-     MOBILE QUOTE
-  ======================================== */
+  /* Mobile quote */
 
   .navbar-mobile-quote {
     min-height: 55px;
@@ -618,9 +594,7 @@
   }
 }
 
-/* ========================================
-   SMALL MOBILE
-======================================== */
+/* Small mobile */
 
 @media (max-width: 520px) {
   .navbar-container {

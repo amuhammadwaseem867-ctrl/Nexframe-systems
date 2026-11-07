@@ -1,6 +1,4 @@
-/* ========================================
-   CONTACT
-======================================== */
+/* Contact */
 
 .contact {
   width: 100%;
@@ -21,9 +19,7 @@
   align-items: start;
 }
 
-/* ========================================
-   LEFT SIDE
-======================================== */
+/* Left side */
 
 .contact-left {
   padding-top: 8px;
@@ -70,9 +66,7 @@
   line-height: 1.75;
 }
 
-/* ========================================
-   CONTACT INFO
-======================================== */
+/* Contact info */
 
 .contact-info {
   display: flex;
@@ -140,9 +134,7 @@
   color: #d6a84f;
 }
 
-/* ========================================
-   LEFT CTA
-======================================== */
+/* Left CTA */
 
 .contact-link {
   display: inline-flex;
@@ -187,9 +179,7 @@
   transform: translate(2px, -2px);
 }
 
-/* ========================================
-   RIGHT SIDE
-======================================== */
+/* Right side */
 
 .contact-right {
   width: 100%;
@@ -201,9 +191,7 @@
   color: #102a43;
 }
 
-/* ========================================
-   FORM HEADER
-======================================== */
+/* Form header */
 
 .contact-form-header {
   display: flex;
@@ -251,9 +239,7 @@
   letter-spacing: 0.1em;
 }
 
-/* ========================================
-   COMPACT QUOTE FORM OVERRIDES
-======================================== */
+/* Compact quote form overrides */
 
 /*
    QuoteForm already contains its own section.
@@ -293,9 +279,7 @@
   margin-bottom: 12px;
 }
 
-/* ========================================
-   TABLET
-======================================== */
+/* Tablet */
 
 @media (max-width: 1000px) {
   .contact-container {
@@ -315,9 +299,7 @@
   }
 }
 
-/* ========================================
-   MOBILE
-======================================== */
+/* Mobile */
 
 @media (max-width: 768px) {
   .contact {
@@ -349,9 +331,7 @@
   }
 }
 
-/* ========================================
-   SMALL MOBILE
-======================================== */
+/* Small mobile */
 
 @media (max-width: 480px) {
   .contact-container {

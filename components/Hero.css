@@ -11,9 +11,7 @@
   color: #ffffff;
 }
 
-/* =========================
-   BACKGROUND
-========================= */
+/* Background */
 
 .hero-background {
   position: absolute;
@@ -29,9 +27,7 @@
   transform: scale(1.02);
 }
 
-/* =========================
-   OVERLAY
-========================= */
+/* Overlay */
 
 .hero-overlay {
   position: absolute;
@@ -64,9 +60,7 @@
     );
 }
 
-/* =========================
-   ARCHITECTURAL GRID
-========================= */
+/* Architectural grid */
 
 .hero-grid {
   position: absolute;
@@ -104,9 +98,7 @@
   pointer-events: none;
 }
 
-/* =========================
-   CONTAINER
-========================= */
+/* Container */
 
 .hero-container {
   position: relative;
@@ -124,9 +116,7 @@
   justify-content: center;
 }
 
-/* =========================
-   CONTENT
-========================= */
+/* Content */
 
 .hero-content {
   width: min(700px, 100%);
@@ -160,9 +150,7 @@
   background: #d6a84f;
 }
 
-/* =========================
-   HEADING
-========================= */
+/* Heading */
 
 .hero h1 {
   max-width: 720px;
@@ -190,9 +178,7 @@
   font-weight: 400;
 }
 
-/* =========================
-   DESCRIPTION
-========================= */
+/* Description */
 
 .hero-content > p {
   width: min(580px, 100%);
@@ -208,9 +194,7 @@
   font-weight: 400;
 }
 
-/* =========================
-   ACTIONS
-========================= */
+/* Actions */
 
 .hero-actions {
   display: flex;
@@ -300,9 +284,7 @@
   border-radius: 50%;
 }
 
-/* =========================
-   BOTTOM FEATURES
-========================= */
+/* Bottom features */
 
 .hero-bottom {
   position: absolute;
@@ -373,9 +355,7 @@
   letter-spacing: 0.25px;
 }
 
-/* =========================
-   SCROLL INDICATOR
-========================= */
+/* Scroll indicator */
 
 .hero-scroll {
   position: absolute;
@@ -415,9 +395,7 @@
   background: rgba(255, 255, 255, 0.4);
 }
 
-/* =========================
-   LAPTOP / TABLET
-========================= */
+/* Laptop / tablet */
 
 @media (max-width: 1150px) {
   .hero-container {
@@ -442,9 +420,7 @@
   }
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* Mobile */
 
 @media (max-width: 900px) {
   .hero {
@@ -533,9 +509,7 @@
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
+/* Small mobile */
 
 @media (max-width: 480px) {
   .hero {

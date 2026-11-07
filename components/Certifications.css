@@ -11,9 +11,7 @@
   margin: 0 auto;
 }
 
-/* ================================
-   HEADING
-================================ */
+/* Heading */
 
 .certifications-heading {
   max-width: 760px;
@@ -52,9 +50,7 @@
   line-height: 1.8;
 }
 
-/* ================================
-   MARQUEE
-================================ */
+/* Marquee */
 
 .certifications-marquee {
   position: relative;
@@ -96,9 +92,7 @@
   );
 }
 
-/* ================================
-   MOVING TRACK
-================================ */
+/* Moving track */
 
 .certifications-track {
   display: flex;
@@ -112,9 +106,7 @@
   animation-play-state: paused;
 }
 
-/* ================================
-   CERTIFICATION ITEM
-================================ */
+/* Certification item */
 
 .certification-logo {
   width: 270px;
@@ -130,9 +122,7 @@
   border-right: 1px solid #dfe4e8;
 }
 
-/* ================================
-   REAL LOGO IMAGE
-================================ */
+/* Real logo image */
 
 .certification-logo-image {
   flex-shrink: 0;
@@ -170,9 +160,7 @@
   transform: scale(1.04);
 }
 
-/* ================================
-   LOGO TEXT
-================================ */
+/* Logo text */
 
 .certification-logo-text {
   display: flex;
@@ -197,9 +185,7 @@
   white-space: nowrap;
 }
 
-/* ================================
-   ANIMATION
-================================ */
+/* Animation */
 
 @keyframes certificationsMove {
   from {
@@ -211,9 +197,7 @@
   }
 }
 
-/* ================================
-   BOTTOM NOTE
-================================ */
+/* Bottom note */
 
 .certifications-note {
   display: flex;
@@ -245,9 +229,7 @@
   line-height: 1.6;
 }
 
-/* ================================
-   TABLET
-================================ */
+/* Tablet */
 
 @media (max-width: 900px) {
   .certifications {
@@ -270,9 +252,7 @@
   }
 }
 
-/* ================================
-   MOBILE
-================================ */
+/* Mobile */
 
 @media (max-width: 640px) {
   .certifications {
@@ -354,9 +334,7 @@
   }
 }
 
-/* ================================
-   REDUCED MOTION
-================================ */
+/* Reduced motion */
 
 @media (prefers-reduced-motion: reduce) {
   .certifications-track {
