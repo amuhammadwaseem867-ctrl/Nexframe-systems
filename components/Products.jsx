@@ -11,9 +11,7 @@ import {
 } from "lucide-react";
 import "./Products.css";
 
-/* ==================================================
-   EXPLORE BY CATEGORY
-================================================== */
+/* Explore by category */
 
 const exploreCategories = [
   {
@@ -48,9 +46,7 @@ const exploreCategories = [
   },
 ];
 
-/* ==================================================
-   PRODUCT TYPE FILTERS
-================================================== */
+/* Product type filters */
 
 const productFilters = [
   "All Products",
@@ -65,9 +61,7 @@ const productFilters = [
   "Folding Doors",
 ];
 
-/* ==================================================
-   MORE FILTERS
-================================================== */
+/* More filters */
 
 const moreFilters = [
   "Residential",
@@ -77,9 +71,7 @@ const moreFilters = [
   "Architectural Systems",
 ];
 
-/* ==================================================
-   PRODUCTS
-================================================== */
+/* Products */
 
 const products = [
   {
@@ -284,9 +276,7 @@ const products = [
   },
 ];
 
-/* ==================================================
-   COMPONENT
-================================================== */
+/* Component */
 
 export default function Products() {
   const [activeFilter, setActiveFilter] =
@@ -303,9 +293,7 @@ export default function Products() {
   const [selectedMoreFilters, setSelectedMoreFilters] =
     useState([]);
 
-  /* ==================================================
-     TOGGLE MORE FILTER
-  ================================================== */
+  /* Toggle more filter */
 
   const toggleMoreFilter = (filter) => {
     setSelectedMoreFilters((current) =>
@@ -315,9 +303,7 @@ export default function Products() {
     );
   };
 
-  /* ==================================================
-     FILTER PRODUCTS
-  ================================================== */
+  /* Filter products */
 
   const filteredProducts = useMemo(() => {
     const query = search.trim().toLowerCase();
@@ -381,9 +367,7 @@ export default function Products() {
     selectedMoreFilters,
   ]);
 
-  /* ==================================================
-     ACTIVE FILTER CHECK
-  ================================================== */
+  /* Active filter check */
 
   const hasActiveFilters =
     search.trim() ||
@@ -391,9 +375,7 @@ export default function Products() {
     category !== "All Categories" ||
     selectedMoreFilters.length > 0;
 
-  /* ==================================================
-     CLEAR FILTERS
-  ================================================== */
+  /* Clear filters */
 
   const clearAllFilters = () => {
     setSearch("");
@@ -402,9 +384,7 @@ export default function Products() {
     setSelectedMoreFilters([]);
   };
 
-  /* ==================================================
-     CATEGORY CARD CLICK
-  ================================================== */
+  /* Category card click */
 
   const selectCategory = (categoryName) => {
     setCategory(categoryName);
@@ -1017,9 +997,7 @@ export default function Products() {
 
         ) : (
 
-          /* ==================================================
-             NO RESULTS
-          ================================================== */
+          /* No results */
 
           <div className="products-no-results">
 

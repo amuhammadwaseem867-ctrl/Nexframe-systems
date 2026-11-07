@@ -1,6 +1,4 @@
-/* ========================================
-   PRELOADER
-======================================== */
+/* Preloader */
 
 .preloader {
   position: fixed;
@@ -15,9 +13,7 @@
   color: #ffffff;
 }
 
-/* ========================================
-   BACKGROUND
-======================================== */
+/* Background */
 
 .preloader-bg {
   position: absolute;
@@ -32,9 +28,7 @@
     #102a43;
 }
 
-/* ========================================
-   GRID
-======================================== */
+/* Grid */
 
 .preloader-grid {
   position: absolute;
@@ -63,9 +57,7 @@
     );
 }
 
-/* ========================================
-   TOP BRAND
-======================================== */
+/* Top brand */
 
 .preloader-top {
   position: absolute;
@@ -92,9 +84,7 @@
   color: #d6a84f;
 }
 
-/* ========================================
-   ARCHITECTURAL FRAME
-======================================== */
+/* Architectural frame */
 
 .architectural-frame {
   position: absolute;
@@ -110,9 +100,7 @@
   overflow: visible;
 }
 
-/* ========================================
-   FRAME LINES
-======================================== */
+/* Frame lines */
 
 .frame-top,
 .frame-right,
@@ -178,9 +166,7 @@
   background: rgba(214, 168, 79, 0.75);
 }
 
-/* ========================================
-   GLASS
-======================================== */
+/* Glass */
 
 .frame-glass {
   position: absolute;
@@ -218,9 +204,7 @@
   transform: skewX(-15deg);
 }
 
-/* ========================================
-   LIGHT SWEEP
-======================================== */
+/* Light sweep */
 
 .frame-light {
   position: absolute;
@@ -246,9 +230,7 @@
   transform: skewX(-15deg);
 }
 
-/* ========================================
-   BRAND BELOW FRAME
-======================================== */
+/* Brand below frame */
 
 .frame-brand {
   position: absolute;
@@ -305,9 +287,7 @@
   padding-left: 0.42em;
 }
 
-/* ========================================
-   BOTTOM TAGLINE
-======================================== */
+/* Bottom tagline */
 
 .preloader-bottom {
   position: absolute;
@@ -327,9 +307,7 @@
   white-space: nowrap;
 }
 
-/* ========================================
-   EXIT LINE
-======================================== */
+/* Exit line */
 
 .preloader-exit {
   position: absolute;
@@ -350,9 +328,7 @@
     0 0 20px rgba(214, 168, 79, 0.4);
 }
 
-/* ========================================
-   MOBILE
-======================================== */
+/* Mobile */
 
 @media (max-width: 768px) {
   .preloader-top {
@@ -388,9 +364,7 @@
   }
 }
 
-/* ========================================
-   SMALL MOBILE
-======================================== */
+/* Small mobile */
 
 @media (max-width: 420px) {
   .architectural-frame {

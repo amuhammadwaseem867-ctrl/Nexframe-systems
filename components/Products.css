@@ -1,6 +1,4 @@
-/* ========================================
-   PRODUCTS
-======================================== */
+/* Products */
 
 .products {
   width: 100%;
@@ -9,10 +7,8 @@
 }
 
 
-/* ========================================
-   PRODUCT HERO BANNER
-   DO NOT CHANGE
-======================================== */
+/* Product hero banner
+   DO NOT CHANGE */
 
 .products-banner {
   width: calc(100% - 80px);
@@ -205,9 +201,7 @@
 }
 
 
-/* ========================================
-   EXPLORE BY CATEGORY
-======================================== */
+/* Explore by category */
 
 .products-categories {
   width: calc(100% - 80px);
@@ -255,9 +249,7 @@
 }
 
 
-/* ========================================
-   CATEGORY CARDS
-======================================== */
+/* Category cards */
 
 .category-cards {
   display: grid;
@@ -565,9 +557,7 @@
 }
 
 
-/* ========================================
-   BROWSE PRODUCTS
-======================================== */
+/* Browse products */
 
 .browse-products {
   width: calc(100% - 80px);
@@ -582,9 +572,7 @@
 }
 
 
-/* ========================================
-   PRODUCT FILTER BAR
-======================================== */
+/* Product filter bar */
 
 .product-filter-bar {
   width: 100%;
@@ -668,9 +656,7 @@
 }
 
 
-/* ========================================
-   PRODUCT TOOLBAR
-======================================== */
+/* Product toolbar */
 
 .product-toolbar {
   display: grid;
@@ -871,9 +857,7 @@
 }
 
 
-/* ========================================
-   MORE FILTER PANEL
-======================================== */
+/* More filter panel */
 
 .more-filters-panel {
   display: flex;
@@ -969,9 +953,7 @@
 }
 
 
-/* ========================================
-   RESULTS INFO
-======================================== */
+/* Results info */
 
 .products-results-info {
   display: flex;
@@ -1026,9 +1008,7 @@
 }
 
 
-/* ========================================
-   PRODUCT GRID
-======================================== */
+/* Product grid */
 
 .product-grid {
   display: grid;
@@ -1040,9 +1020,7 @@
 }
 
 
-/* ========================================
-   PRODUCT CARD
-======================================== */
+/* Product card */
 
 .product-card {
   min-width: 0;
@@ -1233,9 +1211,7 @@
 }
 
 
-/* ========================================
-   PRODUCT CARD INFO
-======================================== */
+/* Product card info */
 
 .product-card-info {
   padding: 20px;
@@ -1330,9 +1306,7 @@
 }
 
 
-/* ========================================
-   NO RESULTS
-======================================== */
+/* No results */
 
 .products-no-results {
   min-height: 280px;
@@ -1414,9 +1388,7 @@
 }
 
 
-/* ========================================
-   LARGE TABLET
-======================================== */
+/* Large tablet */
 
 @media (max-width: 1250px) {
   .products-banner,
@@ -1447,9 +1419,7 @@
 }
 
 
-/* ========================================
-   TABLET
-======================================== */
+/* Tablet */
 
 @media (max-width: 900px) {
   .products-banner {
@@ -1490,9 +1460,7 @@
 }
 
 
-/* ========================================
-   MOBILE
-======================================== */
+/* Mobile */
 
 @media (max-width: 768px) {
   .products-banner,
@@ -1689,9 +1657,7 @@
 }
 
 
-/* ========================================
-   SMALL MOBILE
-======================================== */
+/* Small mobile */
 
 @media (max-width: 520px) {
   .products-banner,
@@ -1744,9 +1710,7 @@
 }
 
 
-/* ========================================
-   VERY SMALL MOBILE
-======================================== */
+/* Very small mobile */
 
 @media (max-width: 380px) {
   .products-banner-content h2 {
